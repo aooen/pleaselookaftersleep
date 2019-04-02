@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="취침 시간 잠금">
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="useLock"
+            android:summaryOff="취침 시간 잠금을 사용하지 않습니다."
+            android:summaryOn="취침 시간 잠금을 사용합니다."
+            android:title="취침 시간에 핸드폰 잠그기" />
+
+        <Preference
+            android:dependency="useLock"
+            android:key="sleepTime"
+            android:title="취침 시간"
+            android:summary="00:00" />
+
+        <Preference
+            android:dependency="useLock"
+            android:key="getupTime"
+            android:title="기상 시간"
+            android:summary="06:00" />
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="취침 시간 교정">
+        <CheckBoxPreference
+            android:dependency="useLock"
+            android:defaultValue="false"
+            android:key="useCorrent"
+            android:summaryOff="희망 취침 시간을 설정 후 체크해주세요."
+            android:summaryOn="다음 취침 시간은 취침 시간 항목을 참고해주세요."
+            android:title="취침 시간 교정" />
+
+        <Preference
+            android:dependency="useLock"
+            android:key="afterTime"
+            android:title="희망 취침 시간"
+            android:summary="23:00" />
+
+        <Preference
+            android:enabled="false"
+            android:key="beforeTime"
+            android:title="초기 취침 시간"
+            android:summary="" />
+
+        <Preference
+            android:enabled="false"
+            android:key="afterDay"
+            android:title="남은 교정 일 수"
+            android:summary="" />
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="앱 정보">
+        <Preference
+            android:title="잠금화면 보기"
+            android:summary="비 수면중에는 언제라도 뒤로가기 키를 눌러 나올 수 있습니다.">
+            <intent
+                android:targetClass="com.aooen.pleaselookaftersleep.LockScreen"
+                android:targetPackage="com.aooen.pleaselookaftersleep" />
+        </Preference>
+        <Preference
+            android:title="인트로 화면 보기"
+            android:summary="작품 필수 조건에 해당하는 덕수고 마크가 인트로 이미지에 포함되어 있습니다.">
+            <intent
+                android:targetClass="com.aooen.pleaselookaftersleep.IntroScreen"
+                android:targetPackage="com.aooen.pleaselookaftersleep" />
+        </Preference>
+        <Preference
+            android:title="개발자 정보"
+            android:summary="덕수고등학교 김학연 (클릭시 덕수고 홈페이지로 이동)">
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="http://www.duksoo.hs.kr/index/index.do" />
+        </Preference>
+    </PreferenceCategory>
+</PreferenceScreen>

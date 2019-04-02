@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/LockScreen">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/imageView"
+        android:layout_gravity="center_vertical"
+        android:scaleType="centerCrop" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:id="@+id/txtNowTime"
+        android:textSize="108dp"
+        android:gravity="center"
+        android:text="00:00"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:typeface="sans"
+        android:textColor="#fff"
+        android:shadowColor="#000"
+        android:shadowDx="0"
+        android:shadowDy="0"
+        android:shadowRadius="8" />
+
+    <LinearLayout android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@drawable/rounded_corner"
+        android:paddingLeft="30dp"
+        android:paddingTop="15dp"
+        android:paddingRight="30dp"
+        android:paddingBottom="15dp"
+        android:orientation="vertical"
+        android:layout_alignParentRight="false"
+        android:layout_alignParentEnd="false"
+        android:gravity="center"
+        android:id="@+id/linearLayout">
+
+        <LinearLayout android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView style="@style/LSTextView"
+                android:text="기상 시간 :" />
+            <TextView android:id="@+id/txtGetUpTime"
+                style="@style/LSTextView"
+                android:text="" />
+            <Button android:id="@+id/btnEdit"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:background="@drawable/ic_mode_edit_black_24dp"
+                android:layout_margin="3dp"
+                android:layout_marginTop="3dp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>
