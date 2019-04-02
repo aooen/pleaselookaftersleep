@@ -1,5 +1,6 @@
 # 수면을 부탁해
-![수면을 부탁해](./ic_launcher-web.png){: width="100" height="100"}
+<img src="./ic_launcher-web.png" alt="수면을 부탁해 아이콘" width="200">
+
 덕수고등학교 2학년 2016년 7월 교내 앱 개발 공모전 출품작입니다.
 
 ## 제안서
